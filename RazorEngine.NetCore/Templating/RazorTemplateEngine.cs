@@ -66,7 +66,9 @@ namespace Microsoft.AspNetCore.Razor.Language
                 throw new ArgumentException("Argument path Cannot Be Null Or Empty");
             }
 
+#pragma warning disable 618
             return this.GenerateCode(this.Project.GetItem(path));
+#pragma warning restore 612
         }
 
         /// <summary>
@@ -117,7 +119,9 @@ namespace Microsoft.AspNetCore.Razor.Language
                 throw new ArgumentException("Argument path Cannot Be Null Or Empty");
             }
 
+#pragma warning disable 618
             return this.CreateCodeDocument(this.Project.GetItem(path));
+#pragma warning restore 618
         }
 
         /// <summary>
@@ -154,7 +158,9 @@ namespace Microsoft.AspNetCore.Razor.Language
                 throw new ArgumentException("Argument path Cannot Be Null Or Empty");
             }
 
+#pragma warning disable 618
             return this.GetImports(this.Project.GetItem(path));
+#pragma warning restore 618
         }
 
         /// <summary>
@@ -200,7 +206,9 @@ namespace Microsoft.AspNetCore.Razor.Language
                 throw new ArgumentException("Argument path Cannot Be Null Or Empty");
             }
 
+#pragma warning disable 618
             return this.GetImportItems(this.Project.GetItem(path));
+#pragma warning restore 618
         }
 
         /// <summary>
