@@ -240,9 +240,7 @@ namespace RazorEngine.Roslyn.CSharp
                     opts = opts.WithDebugInformationFormat(DebugInformationFormat.PortablePdb);
                 }
 
-                var result = Debugger.IsAttached
-                    ? compilation.Emit(assemblyStream, pdbStreamHelper, options: opts)
-                    : compilation.Emit(assemblyStream);
+                var result = compilation.Emit(assemblyStream);
 
                 if (!result.Success)
                 {
